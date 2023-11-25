@@ -1,0 +1,162 @@
+
+
+/* NAVBAR */
+ .header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+ 
+}
+
+
+/* .header:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #404044;
+  z-index: 2;
+} */
+.header-body{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+.header-tasty {
+  display: flex;
+  margin: 20px 0px 15px 80px;
+  text-align: center;
+  max-width: 100px;
+  height: 40px;
+  padding: 0px 15px 25px 15px;
+  border: 2px solid #fff;
+  font-size: 22px;
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+.header-burger{
+  display: none;
+}
+.header-M{
+  display: none;
+}
+
+.header-list{
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.header-nav{
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  padding: 0px 20px;
+  margin-left: 300px;
+  /* opacity: 1 !important; */
+  list-style: none;
+}
+/* .header-nav li a {
+  text-decoration: none;
+  font-size: 16px;
+} */
+.header-list li{
+  list-style: none;
+  margin: 0px 0px 0px 20px;
+
+}
+
+.header-list li a {    
+  text-decoration: none;
+  color: white; 
+  font-size: 16px;
+  }
+
+  /* MEDIA HEADER */
+ @media (max-width:768px) {  
+  /* .header{
+    position: fixed;
+  } */
+   .header-body{
+    height: 50px;
+  }
+
+  .header-tasty {
+    font-size: 18px;
+    margin: 20px 0px 15px 40px;
+  }
+  .header-nav{
+    display: none;
+  }
+  .header-burger{
+    display: block;
+    position: relative;
+    width: 125px;
+    height: 10px;
+    z-index: 3;
+  }
+  .header-burger span{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: -20px;
+    color: #fff;
+    transition: all 0.3s ease 0s;
+  }
+  .header-burger.active span{
+    transform: scale(0);
+  }
+
+  .header-M{
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    display: block;
+    color: white;
+    font-size: 18px;
+  }
+  .header-menu{
+    position: fixed; 
+    top: -130%;
+    left: 0; 
+    width: 100%;
+    transition: all 0.3s ease 0s;
+    background-color: #404044;
+    padding: 400px 10px 20px 45px;
+  }
+  .header-menu.active{
+    top: 0;
+  }
+  .header-list{
+    display: block;
+
+  }
+  .header-list li{
+    margin: 0px 0px 20px 0px;
+  }
+}
+
+    @media (max-width:1024px) {
+         
+       }
+      
+       @media (max-width:1200px) {
+         
+       }
+      
+       @media (max-width:925px) {
+         .navul{
+           display: none;
+         }
+       } 
+/* ================= */
+
