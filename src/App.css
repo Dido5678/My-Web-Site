@@ -8,30 +8,21 @@
     html {
         font-family: sans-serif;
         line-height: 1.15;
-        -webkit-text-size-adjust: 100%;
-        -ms-text-size-adjust: 100%;
-        -ms-overflow-style: scrollbar;
-        -webkit-tap-highlight-color: transparent; }
+        height: 100%;
+     
+      }
       
-      @-ms-viewport {
-        width: device-width; }
-      
-       figcaption, figure, footer, header, main, nav, section {
-        display: block; }
-      
+        
       body {
-        margin: 0;
-        background-image: url(../public/images/bg_1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",Roboto, Helvetica, Arial, sans-serif;
-        font-size: 1rem;
+        height: 100%;
+        font-family: "Muli", "Indie Flower", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",Roboto, Helvetica, Arial, sans-serif;
         font-weight: 400;
-        line-height: 1.5;
+        line-height: 1.8;
         text-align: left;
-        cursor: pointer;
         color: #8b8b92;
+        font-size: 16px;
+        background-color: #f8f9fa;
+        margin: 0;
       }
 
       a{

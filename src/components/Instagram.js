@@ -1,49 +1,39 @@
 import React from 'react';
+import "../assets/global.css";
+import '../Pages/Menu.css';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
-import '../assets/style.css';
-// import { FontAwesomeIcon } from '@fortawesome/pro-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+
+const imagePaths = [
+  'images/insta-1.jpg',
+  'images/insta-2.jpg',
+  'images/insta-3.jpg',
+  'images/insta-4.jpg',
+  'images/insta-5.jpg',
+];
 
 const Instagram = () => {
-    return (
-        <>
-            <div className="instagram">
-                <h2 className='inst-title'>
-                    INSTAGRAM
-                </h2>
-                <div className="inst-list">
-                <div className="inst-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}assets/images/insta-1.jpg)` }}>
-                    <Link to="images/insta-1.jpg" className="inst-link">
-                        <FontAwesomeIcon icon="fa-solid fa-camera" />
-                    </Link>
-
-                </div>
-                <div className="inst-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/insta-2.jpg)` }}>
-                    <Link to="images/insta-2.jpg" className="inst-link">
-                        <FontAwesomeIcon icon="fa-solid fa-camera" />
-                    </Link>
-                </div>
-                <div className="inst-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/insta-3.jpg)` }}>
-                    <Link to="images/insta-3.jpg" className="inst-link">
-                        <FontAwesomeIcon icon="fa-solid fa-camera" />
-                    </Link>
-                </div>
-                <div className="inst-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/insta-4.jpg)` }}>
-                    <Link to="images/insta-4.jpg" className="inst-link">
-                        <FontAwesomeIcon icon="fa-solid fa-camera" />
-                    </Link>
-                </div>
-                <div className="inst-item" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/images/insta-5.jpg)` }}>
-                    <Link to="images/insta-5.jpg" className="inst-link">
-                        <FontAwesomeIcon icon="fa-solid fa-camera" />
-                    </Link>
-                </div>
-                </div>
+  return (
+    <section className='instagram'>
+    <div className="instagram-cont">
+        <h2 className='inst-title'> INSTAGRAM </h2>
+    <div className="inst-list">
+      {imagePaths.map((path, index) => (
+        <div className={`inst-item${index + 1}`} key={index}>
+          <Link to={path} className={`inst-link${index + 1}`}>
+            <div className='blockInsta'>
+                <FontAwesomeIcon icon={faInstagram} className="fa-inst"/>
             </div>
-        </>
+          </Link>
+        </div>
+      ))}
+    </div>
+    </div>
+    </section>
+  );
+};
 
-    )
-}
-
-export default Instagram;
+ export default Instagram;
