@@ -3,32 +3,30 @@
 /* TITLEMENU */
 
 .myMenuCont {
-  cursor: pointer;
+  position: relative;
   color: white;
   text-align: center;
   flex-flow: row nowrap;
   padding: 208px 0px; 
   background: rgba(64, 64, 68, 0.6); 
   height: 750px;
-  /* cursor: pointer;
-  display: flex;
-  gap: 20px;
-  padding-left: 500px;
-  color: white;
-  text-align: center;
-  margin: 0 auto;
-  flex-flow: row nowrap;
-  text-decoration: underline; */
+
+z-index: 100;
+}
+.menu-container{
+  max-width: 1140px;
+  position: absolute;
+  bottom: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+ 
 }
 
-.titMenu {
-  text-align: center;
-  color: white;
-  font-family: "Indie Flower", cursive;
-  font-size: 60px;
-  padding-bottom: 150px;
+@media (max-width:1024px) {
+  .menu-container{
+    bottom: -470px;
+  }
 }
-
 .myMenuCont .section1{
   padding-top: 72px;
 }
@@ -39,7 +37,11 @@
   background-color: #f8f9fa;
   text-align: center;
 }
-
+@media (max-width:1024px) {
+  .sectionMenu{
+  padding-top: 510px;
+  }
+}
 .ourMenu {
   color: #8b8b92;
   text-align: center;
@@ -58,17 +60,12 @@
   justify-content: center;
   
 }
-
-.content a {
-  /* display: flex;
-  color: #a5a5ab;
-  width: 120px;
-  height: 80px;
-  margin: 0px 5px;
-  background: #fafafa;
-  box-shadow: 0px 4px 18px -12px rgba(0, 0, 0, 0.75);
-  padding: 30px 10px; */
+@media (max-width:768px) {
+.content {
+  flex-wrap: wrap; 
 }
+}
+
 .sectBut{
   display: flex;
   color: #a5a5ab;
@@ -96,16 +93,17 @@
   margin-top: 80px;
 }
 .sectionMenu-block{
-  width: 85%;
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap:20px;
 }
+
 .block{    
-  width: 48%;
+  max-width: 455px;
+  width: 100%;
   font-size: 22px;
-  height: 100px;
   background: #fff;
   display: flex;
   padding: 15px;
@@ -116,6 +114,7 @@
 
 .sectionMenu-img{
   width: 60px;
+  min-width: 60px;
   height: 60px;
   border-radius: 50%;
 }
@@ -140,4 +139,16 @@
 }
 .sectionMenu-price{
   font-size: 35px;
+}
+@media (max-width:890px) {
+  .sectionMenu-block{
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sectionMenu-cont{
+
+    gap: 15px;
+  
+  }
 }

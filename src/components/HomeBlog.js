@@ -21,11 +21,11 @@ const HomeBlog = () => {
                 <h3 className='home-blog-subtitle'>BLOG</h3>
                 <h2 className='home-blog-title'>Recent Blog</h2>
             <Splide aria-label="My Favorite Images">
-                <SplideSlide style = {{display: "flex", gap: "60px"}}>
+                <SplideSlide className='spliserBlock' >
                 {blogs.map((blog) => (
                     <div key={blog.id} className="blogs-item">
                         <Link to="single-blog">
-                            <img className='blogs-img' src={blog.image} alt="image" />
+                            <img className='blogs-img' src={blog.image} alt="my home blog" />
                         </Link>
                         <div>
                             <span className='blogs-subtitle'>{blog.date}</span>
@@ -34,7 +34,7 @@ const HomeBlog = () => {
                         <p className='blogs-text'>{blog.text}</p>
                         <div className='blogs-icon'>
                             <p className='blogs-more'>{blog.more}</p>
-                            <img src={blog.icon} className='blogs-icon1' alt="icon" />
+                            <img src={blog.icon} className='blogs-icon1' alt="icon information" />
                             <p className='blogs-number'>{blog.number}</p>
                         </div>
                     </div>

@@ -20,7 +20,9 @@ const Menu = () => {
               <Link to="/menu">MENU</Link>
               <h1 className='titMenu title'>Discover Our Exclusive Menu</h1>
             </div>
-            <TitleFormMenu />
+            <div className='menu-container container'>
+              <TitleFormMenu />
+            </div> 
           </section>
         <SectionMenu /> 
         <Instagram /> 

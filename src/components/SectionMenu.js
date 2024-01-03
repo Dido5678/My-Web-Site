@@ -40,7 +40,7 @@ const SectionMenu = () => {
 
     return filteredData.map(item => (
       <div key={item.id} className="block">
-        <img className='sectionMenu-img' src={item.image} alt="image" />
+        <img className='sectionMenu-img' src={item.image} alt="sectionmenu" />
         <div className='sectionMenu-cont'>
           <div>
             <h3 className='sectionMenu-title'>{item.title}</h3><br></br>

@@ -1,151 +1,141 @@
-import React, { useState } from 'react';
-import "../../assets/global.css";
-import '../../Pages/Menu.css';
-
+import React, { useState, useEffect } from 'react';
+import { Form, Container, FloatingLabel } from 'react-bootstrap';
+import '../../assets/global.css';
 
 const TitleFormMenu = () => {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [date, setDate] = useState("");
-  const [time, setTime] = useState("");
-  const [text, setText] = useState("");
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    date: "",
+    time: "",
+    person: ""
+  });
+
+  const [validated, setValidated] = useState(false);
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
-    switch (name) {
-      case 'name':
-        setName(value);
-        break;
-      case 'phone':
-        setPhone(value);
-        break;
-      case 'date':
-        setDate(value);
-        break;
-      case 'time':
-        setTime(value);
-        break;
-      case 'text':
-        setText(value);
-        break;
-      default:
-        break;
-    }
-  }
+    setFormData({
+      ...formData,
+      [name]: value
+    });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // alert(`Name: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nPerson: ${text}`);
-  }
+  
+    const form = event.currentTarget;
+  
+    if (form.checkValidity() === false) {
+      event.stopPropagation();
+    } else {
+      // Save the form data to localStorage
+      localStorage.setItem("reservationData", JSON.stringify(formData));
+  
+      console.log("Your table is reserved");
+      alert("Your table is reserved");
+      // Additional logic for form submission if needed
+    }
+  
+    setValidated(true);
+  };
+   // Load data from local storage on component mount
+   useEffect(() => {
+    const storedData = localStorage.getItem("reservationData");
+    if (storedData) {
+      const parsedData = JSON.parse(storedData);
+      setFormData(parsedData);
+    }
+  }, []);
+ 
+  
+  const formatTime = (index) => {
+    const hours = Math.floor(index / 2);
+    const minutes = index % 2 === 0 ? '00' : '30';
+    const period = hours < 12 ? 'am' : 'pm';
+    const formattedHours = hours % 12 === 0 ? 12 : hours % 12;
+    return `${formattedHours}:${minutes}${period}`;
+  };
+
 
   return (
-  
-    <section className='section1'>
-      <div className='section-form container'>
-     
-      <form onSubmit={handleSubmit} className="form1">
-        <label>
-          <input
-            name="name"
-            type="text"
-            value={name}
-            onChange={handleInputChange}
-            placeholder="Name" 
-            className='titlemenu-inp' />
-        </label>
-        <label>
-          <input
-            name="phone"
-            type="tel"
-            value={phone}
-            onChange={handleInputChange}
-            placeholder="Phone" 
-            className='titlemenu-inp'/>
-        </label>
-        <label>
-          <input
-            name="date"
-            type="date"
-            value={date}
-            onChange={handleInputChange}
-            placeholder="M/D/YYYY" 
-            className='titlemenu-inp'/>
-        </label>
-        <label>
-        <select name="time" value={time} onChange={handleInputChange} className="time">
-            <option value="0">Time</option>
-            <option value="1">12.00am</option>
-            <option value="2">12.30am</option>
-            <option value="3">1.00am</option>
-            <option value="4">1.30am</option>
-            <option value="5">2.00am</option>
-            <option value="6">2.30am</option>
-            <option value="7">3.00am</option>
-            <option value="8">3.30am</option>
-            <option value="9">4.00am</option>
-            <option value="10">4.30am</option>
-            <option value="11">5.00am</option>
-            <option value="12">5.30am</option>
-            <option value="13">6.00am</option>
-            <option value="14">6.30am</option>
-            <option value="15">7.00am</option>
-            <option value="16">7.30am</option>
-            <option value="17">8.00am</option>
-            <option value="18">8.30am</option>
-            <option value="19">9.00am</option>
-            <option value="20">9.30am</option>
-            <option value="21">10.00am</option>
-            <option value="22">10.30am</option>
-            <option value="23">11.00am</option>
-            <option value="24">11.30am</option>
-            <option value="25">12.00am</option>
-            <option value="26">12.30am</option>
-            <option value="27">1.00am</option>
-            <option value="28">1.30am</option>
-            <option value="29">2.00am</option>
-            <option value="30">2.30am</option>
-            <option value="31">3.00am</option>
-            <option value="32">3.30am</option>
-            <option value="33">4.00am</option>
-            <option value="34">4.30am</option>
-            <option value="35">5.00am</option>
-            <option value="36">5.30am</option>
-            <option value="37">6.00am</option>
-            <option value="38">6.30am</option>
-            <option value="39">7.00am</option>
-            <option value="40">7.30am</option>
-            <option value="41">8.00am</option>
-            <option value="42">8.30am</option>
-            <option value="43">9.00am</option>
-            <option value="44">9.30am</option>
-            <option value="45">10.00am</option>
-            <option value="46">10.30am</option>
-            <option value="47">11.00am</option>
-            <option value="48">11.30am</option>
-          </select>
-        </label>
-        <label>
-          <select name="text" value={text} onChange={handleInputChange} className="person">
-          <option value="0">Person</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4+">4+</option>
-          </select>
-        </label>
-        <label>
-          <input
-            type="submit"
-            value="Book a table" className='mySubmit'/>
-        </label>
-      </form>
+    <div className="form-wrapper">
+      <div className="form-container container">
+        <Form noValidate validated={validated} onSubmit={handleSubmit} className="form-form">
+          <Container fluid>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <FloatingLabel controlId="firstNameLabel" label="Name">
+                <Form.Control
+                  type="text"
+                  // placeholder="Name"
+                  required
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                />
+              </FloatingLabel>
+              <FloatingLabel controlId="phoneLabel" label="Phone">
+                <Form.Control
+                  type="tel"
+                  // placeholder="Phone"
+                  required
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
+              </FloatingLabel>
+              <FloatingLabel controlId="DateLabel" label="">
+                <Form.Control
+                  name="date"
+                  type="date"
+                  value={formData.date}
+                  onChange={handleInputChange}
+                  required
+                />
+              </FloatingLabel>
+              <FloatingLabel controlId="timeLabel" label="">
+               <Form.Select
+                 className='form-control'
+                 name="time"
+                 value={formData.time}
+                 onChange={handleInputChange}
+                 required
+               >
+                 <option value="">Time</option>
+                 {Array.from({ length: 49 }, (_, index) => (
+                   <option key={index} value={index}>{formatTime(index)}</option>
+                 ))}
+               </Form.Select>
+              </FloatingLabel>
+              <FloatingLabel controlId="PersonLabel" label="">
+                <Form.Select
+                  className='form-control'
+                  name="person"
+                  value={formData.person}
+                  onChange={handleInputChange}
+                  required
+                >
+                  <option value="0">Person</option>
+                   <option value="1">1</option>
+                   <option value="2">2</option>
+                   <option value="3">3</option>
+                   <option value="4+">4+</option>
+                </Form.Select>
+              </FloatingLabel>
+              <button type="submit" className='mySubmit'>Book a Table</button>
+            </Form.Group>
+          </Container>
+        </Form>
       </div>
-      </section>
-   
-  )
-}
+    </div>
+  );
+};
 
 export default TitleFormMenu;
+
+
+
+
 
 
 

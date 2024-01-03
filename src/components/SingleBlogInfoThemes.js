@@ -34,7 +34,8 @@ const SingleBlogInfoThemes = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // alert(`Name: ${name}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nPerson: ${text}`);
+
+        alert(`Name: ${name}\nEmail: ${email}\nText: ${text}\nTextarea: ${textarea}`);
     }
 
     return (
@@ -45,13 +46,13 @@ const SingleBlogInfoThemes = () => {
                         <h2 className='infoTM-title'>#1. We Love WordPress Themes</h2>
                         <p className='infoTM-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, eius mollitia suscipit, quisquam doloremque distinctio perferendis et doloribus unde architecto optio laboriosam porro adipisci sapiente officiis nemo accusamus ad praesentium? Esse minima nisi et. Dolore perferendis, enim praesentium omnis, iste doloremque quia officia optio deserunt molestiae voluptates soluta architecto tempora.</p>
                         <p className='infoTM-img'>
-                            <img src="./images/blog/infoTM_6.jpg" alt="image" />
+                            <img src="./images/blog/infoTM_6.jpg" alt="info team" />
                         </p>
                         <p className="infoTM-text">Molestiae cupiditate inventore animi, maxime sapiente optio, illo est nemo veritatis repellat sunt doloribus nesciunt! Minima laborum magni reiciendis qui voluptate quisquam voluptatem soluta illo eum ullam incidunt rem assumenda eveniet eaque sequi deleniti tenetur dolore amet fugit perspiciatis ipsa, odit. Nesciunt dolor minima esse vero ut ea, repudiandae suscipit!</p>
                         <h2 className='infoTM-title'>#2. Creative WordPress Themes</h2>
                         <p className='infoTM-text'>Temporibus ad error suscipit exercitationem hic molestiae totam obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora maiores ex architecto voluptatum aut officia doloremque. Error dolore voluptas, omnis molestias odio dignissimos culpa ex earum nisi consequatur quos odit quasi repellat qui officiis reiciendis incidunt hic non? Debitis commodi aut, adipisci.</p>
                         <p className='infoTM-img'>
-                            <img src="./images/blog/infoTM_8.jpg" alt="image" />
+                            <img src="./images/blog/infoTM_8.jpg" alt="info team" />
                         </p>
                         <p className="infoTM-text">Quisquam esse aliquam fuga distinctio, quidem delectus veritatis reiciendis. Nihil explicabo quod, est eos ipsum. Unde aut non tenetur tempore, nisi culpa voluptate maiores officiis quis vel ab consectetur suscipit veritatis nulla quos quia aspernatur perferendis, libero sint. Error, velit, porro. Deserunt minus, quibusdam iste enim veniam, modi rem maiores.</p>
                         <p className='infoTM-text'>Odit voluptatibus, eveniet vel nihil cum ullam dolores laborum, quo velit commodi rerum eum quidem pariatur! Quia fuga iste tenetur, ipsa vel nisi in dolorum consequatur, veritatis porro explicabo soluta commodi libero voluptatem similique id quidem? Blanditiis voluptates aperiam non magni. Reprehenderit nobis odit inventore, quia laboriosam harum excepturi ea.</p>
@@ -67,7 +68,7 @@ const SingleBlogInfoThemes = () => {
                         </div>
                         <div className='infoTM-author'>
                             <div className='author-self'>
-                                <img src="./images/blog/person.jpg" alt="image" />
+                                <img src="./images/blog/person.jpg" alt="info team" />
                             </div>
                             <div className='author-self'>
                                 <h3 className='self-title'>Lance Smith</h3>
@@ -79,7 +80,7 @@ const SingleBlogInfoThemes = () => {
                             <ul className='comment-list'>
                                 <li className='comment1'>
                                     <div>
-                                        <img src="./images/blog/person.jpg" />
+                                        <img src="./images/blog/person.jpg" alt="person 1"/>
                                     </div>
                                     <div>
                                         <h3>Jean Doe</h3>
@@ -93,7 +94,7 @@ const SingleBlogInfoThemes = () => {
                                 <li className='comment2'>
                                     <div className='comment'>
                                         <div>
-                                            <img src="./images/blog/person.jpg" />
+                                            <img src="./images/blog/person.jpg" alt="person 2blog"/>
                                         </div>
                                         <div>
                                             <h3>Jean Doe</h3>
@@ -108,7 +109,7 @@ const SingleBlogInfoThemes = () => {
                                         <li className='comment2'>
                                             <div className='comment'>
                                                 <div>
-                                                    <img src="./images/blog/person.jpg" />
+                                                    <img src="./images/blog/person.jpg" alt="person 4 blog" />
                                                 </div>
                                                 <div>
                                                     <h3>Jean Doe</h3>
@@ -123,7 +124,7 @@ const SingleBlogInfoThemes = () => {
                                                 <li className='comment2'>
                                                     <div className='comment'>
                                                         <div>
-                                                            <img src="./images/blog/person.jpg" />
+                                                            <img src="./images/blog/person.jpg" alt="person 5 blog"/>
                                                         </div>
                                                         <div>
                                                             <h3>Jean Doe</h3>
@@ -138,7 +139,7 @@ const SingleBlogInfoThemes = () => {
                                                         <li className='comment2'>
                                                             <div className='comment'>
                                                                 <div>
-                                                                    <img src="./images/blog/person.jpg" />
+                                                                    <img src="./images/blog/person.jpg" alt="person 6 bloger"/>
                                                                 </div>
                                                                 <div>
                                                                     <h3>Jean Doe</h3>
@@ -158,7 +159,7 @@ const SingleBlogInfoThemes = () => {
                                 </li>
                                 <li className='comment'>
                                     <div>
-                                        <img src="./images/blog/person.jpg" />
+                                        <img src="./images/blog/person.jpg"alt="person 27 blog" />
                                     </div>
                                     <div>
                                         <h3>Jean Doe</h3>
@@ -172,7 +173,7 @@ const SingleBlogInfoThemes = () => {
                             </ul>
                             <div className='comments-form'>
                                 <h3>Leave a comment</h3>
-                                <form action='#' className='form-control'>
+                                <form action='#'onSubmit={handleSubmit} className='form-controlblock'>
                                     <label>Name*<br></br>
                                         <input
                                             name="name"
@@ -185,7 +186,7 @@ const SingleBlogInfoThemes = () => {
                                         <input
                                             name="email"
                                             type="email"
-                                            value=""
+                                            value={email}
                                             onChange={handleInputChange}
                                             className='form-inp' />
                                     </label>
@@ -193,27 +194,25 @@ const SingleBlogInfoThemes = () => {
                                         <input
                                             name="text"
                                             type="text"
-                                            value=""
+                                            value={text}
                                             onChange={handleInputChange}
                                             className='form-inp' />
                                     </label>
                                     <label>Message<br></br>
                                         <textarea
-                                            name="text"
+                                            name="textarea"
                                             cols={72}
                                             rows={9}
-                                            value=""
+                                            value={textarea}
                                             onChange={handleInputChange}
                                             className='form-inp-textarea'>
                                         </textarea>
                                     </label>
                                     <div>
-                                        <input
-                                            name="submit"
-                                            type="text"
-                                            value="Post Comment"
-                                            onChange={handleInputChange}
-                                            className='contact-submit' />
+                                        <button type="submit"
+                                            onClick={handleSubmit}
+                                            // onChange={handleInputChange}
+                                            className='contact-submit'>Post Comment</button>
                                     </div>
                                 </form>
                             </div>
@@ -225,7 +224,7 @@ const SingleBlogInfoThemes = () => {
                             <form action='#' className='form-search'>
                                 <div className='form-search'>
                                     <input type='text' placeholder='Type a keyword and hit enter' />
-                                    <img src="./images/blog/search.png" alt="image" className='img-search' />
+                                    <img src="./images/blog/search.png" alt="info form" className='img-search' />
                                 </div>
                             </form>
                         </div>

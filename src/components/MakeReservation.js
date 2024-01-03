@@ -10,9 +10,29 @@ const MakeReservation = () => {
     const [date, setDate] = useState("Date");
     const [time, setTime] = useState("");
     const [text, setText] = useState("");
+    const [errors, setErrors] = useState({
+      email: '',
+    });
+    const [formData, setFormData] = useState({
+      name: '',
+      email: '',
+      phone: '',
+      date: '',
+      time: '',
+      text: '',
+    });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
+
+    // console.log(formData);
+      console.log(event.target.value);
+ setFormData({
+   ...formData,
+   [name]: value,
+ });
+ validateInput(name, value);
+
     switch (name) {
       case 'name':
         setName(value);
@@ -35,13 +55,29 @@ const MakeReservation = () => {
       default:
         break;
     }
-  }
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // alert(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nDate: ${date}\nTime: ${time}\nPerson: ${text}`);
-    
+    console.log('Form submitted:', formData);
   }
+  const validateInput = (name, value) => {
+    let error = '';
+
+
+    if (name === 'email') {
+      // Simple email regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      error = value.match(emailRegex) ? '' : 'Invalid email address';
+    }
+
+
+    setErrors({
+      ...errors,
+      [name]: error,
+    });
+  };
 
     return  ( 
         <section className='make-reserv'>
@@ -49,7 +85,7 @@ const MakeReservation = () => {
                 <h2 className='reserv-title'>Make a Reservation</h2>
               <div className='reserv-content'>
                 <div className='reserv-image'>
-                <img src='./images/bg_1.jpg'  alt="image"/>
+                <img src='./images/bg_1.jpg'  alt="background"/>
                 </div>
             <div className='reserv-block'>
                 
@@ -137,15 +173,16 @@ const MakeReservation = () => {
                         onChange={handleInputChange}
                         placeholder="email" 
                         className='reserv-email'/>
-                    
+                    <span style={{ color: 'red' }}>{errors.email}</span>
                     <label>Date<br></br></label>
                       <input
-                        type="text"
+                      name="date"
+                        type="date"
                         value={date}
                         onChange={handleInputChange}
                         placeholder="Date" 
                         className='reserv-date'/>
-                 
+            
                     <label>Person<br></br></label>
                       <select name="text" value={text} onChange={handleInputChange} className="reserv-person">
                       <option value="0">Person</option>

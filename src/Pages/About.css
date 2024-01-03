@@ -25,11 +25,14 @@
 .chef-list{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 30px;
 }
 .chef-item{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .chef-name{
     font-size: 20px;
@@ -45,7 +48,7 @@
     padding-bottom: 20px;
 }
 .chef-img{
-    width:360px;
+    max-width:100%;
     height: 400px;
     object-fit: cover;
 }

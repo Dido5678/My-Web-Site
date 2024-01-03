@@ -8,7 +8,6 @@ import Hamburger from 'hamburger-react';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHeaderFixed, setIsHeaderFixed] = useState(false);
-  const [style, setStyle] = useState({ color: 'white' });
   const [colors,setColor]=useState("");
   const [colors1,setColor1]=useState("");
   const [colors2,setColor2]=useState("");
@@ -102,11 +101,3 @@ const Header = () => {
 export default Header;
 
 
-{/* <li>
-  <Link to="/" className='header-link' onClick={() => handleLinkClick('home')}
-        style={{ color: clickedLink === 'home' ? '#FFB400' : 'inherit' }}>Home</Link>
-</li>
-<li>
-  <Link to="/menu" className='header-link' onClick={() => handleLinkClick('menu')}
-        style={{ color: clickedLink === 'menu' ? '#FFB400' : 'inherit' }}>Menu</Link>
-</li> */}

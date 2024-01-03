@@ -49,7 +49,7 @@ const GuestSays = () => {
                         <img src='../images/person_3.jpg' alt="Slide 3" className="guest-image"/>
                         <p className='guest-star'>
                             <img src='../images/star.png' />
-                            <img  src='../images/star.png' />
+                            <img src='../images/star.png' />
                             <img src='../images/star.png' />
                             <img src='../images/star.png' />
                             <img src='../images/half-star.png' />
@@ -62,7 +62,7 @@ const GuestSays = () => {
                         <img src='../images/person_1.jpg' alt="Slide 4" className="guest-image"/>
                         <p className='guest-star'>
                             <img src='../images/star.png' />
-                            <img  src='../images/star.png' />
+                            <img src='../images/star.png' />
                             <img src='../images/star.png' />
                             <img src='../images/star.png' />
                             <img src='../images/half-star.png' />
@@ -75,7 +75,7 @@ const GuestSays = () => {
                         <img src='../images/person_2.jpg' alt="Slide 5" className="guest-image"/>
                         <p className='guest-star'>
                             <img src='../images/star.png' />
-                            <img  src='../images/star.png' />
+                            <img src='../images/star.png' />
                             <img src='../images/star.png' />
                             <img src='../images/star.png' />
                             <img src='../images/half-star.png' />

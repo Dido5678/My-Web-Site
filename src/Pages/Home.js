@@ -7,7 +7,7 @@ import AboutTasty from "../components/AboutTasty";
 import SectionMenu from "../components/SectionMenu";
 import HomeReservation from "../components/HomeReservation";
 import HomeOurSpecialties from "../components/HomeOurSpecialties";
-import GuestSays from "../components/GuestSays";
+// import GuestSays from "../components/GuestSays";
 import HomeBlog from "../components/HomeBlog";
 import Instagram from "../components/Instagram";
 import Footer from '../LayoutMyFiles/Footer'; 
@@ -23,7 +23,7 @@ const Home = () => {
             <SectionMenu />
             <HomeReservation />
             <HomeOurSpecialties />
-            <GuestSays />
+            {/* <GuestSays /> */}
             <HomeBlog />
             <Instagram /> 
             <Footer/>

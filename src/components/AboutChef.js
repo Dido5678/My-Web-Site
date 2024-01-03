@@ -12,17 +12,17 @@ const AboutChef = () => {
                     <div className='chef-item'>
                         <span className='chef-name'>Thomas Smith</span>
                         <span className='chef-profession'>Head Chef</span>
-                        <img className='chef-img' src="./images/about/chef-1.jpg" alt="about" />
+                        <img className='chef-img' src="./images/about/chef-1.jpg" alt="about chef" />
                     </div>
                     <div className='chef-item'>
                         <span className='chef-name'>Francis Gibson</span>
                         <span className='chef-profession'>Assistant Chef</span>
-                        <img className='chef-img' src="./images/about/chef-2.jpg" alt="about" />
+                        <img className='chef-img' src="./images/about/chef-2.jpg" alt="about chef" />
                     </div>
                     <div className='chef-item'>
                         <span className='chef-name'>Angelo Maestro</span>
                         <span className='chef-profession'>Assistant Chef</span>
-                        <img className='chef-img' src="./images/about/chef-3.jpg" alt="about" />
+                        <img className='chef-img' src="./images/about/chef-3.jpg" alt="about chef" />
                     </div>
                 </div>
             </div>
